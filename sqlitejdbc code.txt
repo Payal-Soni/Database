@@ -1,0 +1,18 @@
+E:\sqlite\sqlite-tools-win32-x86-3360000
+sqlite-tools-win32-x86-3360000>prompt @$f
+
+Database creation:-
+@)sqlite3 Moviedb.db
+SQLite version 3.36.0 2021-06-18 18:36:39
+Enter ".help" for usage hints.
+
+Table creation:-
+sqlite> create table movies(name varchar(20), actor varchar(20), actress varchar(20), director varchar(20),year int(4);
+
+insert values:-
+ insert into movies values('shershah', 'siddharth malhotra', 'kiara advani', 'vishnu vardhan', 2021);
+ insert into movies values('mimi', 'pankaj tripathi', 'kirti sanon', 'laxman utekar', 2021);
+ insert into movies values('entertainment', 'akshay kumar', 'tamannah bhatia', 'farhad samji', 2014);
+
+select all rows:-
+select * from movies
