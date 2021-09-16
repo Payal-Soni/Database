@@ -1,0 +1,68 @@
+#Database connection:
+
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost", user="root", password="")
+print(mydb)
+print("connection estabilished")
+
+
+#Database connection:
+
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost", user="root", password="")
+mycursor = mydb.cursor()
+mycursor.execute("CREATE DATABASE MOVIEDB")
+print("Database has been created")
+
+# You can check if a database exist by listening all databses in your system by using the 
+#"SHOW DATABASE" statement,
+same as above
+mycursor=mydb.cursor()
+for x in mycursor:
+print(x)
+
+#In database "Table Creation":
+
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost", user="root", password="")
+mycursor = mydb.cursor()
+mycursor.execute("CREATE TABLE MOVIES('NAME VARCHAR(20)',' ACTOR VARCHAR(20)',
+ 'ACTRESS VARCHAR', 'DIRECTOR VARCHAR', 'YEAR OF RELEASE VARCHAR(04)')") 
+print("Table has been created")
+
+# Insert Values:
+
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost", user="root", password="")
+mycursor = mydb.cursor()
+mycursor.execute("INSERT INTO MOVIES('SHERSHAH','SIDDHARTH MALHOTRA',
+ 'KIARA ADVANI', 'VISHNU VARDHAN', '2021')") 
+print("Table has been created")
+
+#Same as the above
+mycursor.execute("INSERT INTO MOVIES('MIMI','PANKAJ TRIPATHI',
+ 'KIRTI SANON', 'LAXMAN UTEKAR', '2021')") 
+
+# Select records from table:
+
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost", user="root", password="")
+mycursor = mydb.cursor()
+mycursor.execute("SELECT * FROM MOVIES") 
+myresult=mycursor.fetchall()
+                 #fetchone()
+for x in myresult:
+print(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
